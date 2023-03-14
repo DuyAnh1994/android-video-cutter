@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mobile.videocutter.presentation.widget.HeaderView
+            android:id="@+id/hvTasselsVideoRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hv_left_ic="@drawable/ic_black_close"
+            app:hv_right_tv_text="@string/save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <FrameLayout
+            android:id="@+id/flTasselsVideoFirst"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/flTasselsVideoSecond"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hvTasselsVideoRoot">
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/pvTasselsVideoPlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:use_controller="false" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flTasselsVideoSecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:padding="@dimen/dimen_10"
+            app:layout_constraintBottom_toTopOf="@id/crvTasselsVideoTool"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/ivTasselsVideoStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:src="@drawable/ic_black_pause_video" />
+
+            <TextView
+                android:id="@+id/pvTasselsVideoTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12" />
+
+            <ImageView
+                android:id="@+id/ivTasselsVideoEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:src="@drawable/ic_rotatevideo" />
+
+        </FrameLayout>
+
+        <com.mobile.videocutter.presentation.widget.recyclerview.CustomRecyclerView
+            android:id="@+id/crvTasselsVideoTool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -12,7 +12,9 @@
     <string name="cancel">Cancel</string>
     <string name="confirm_delete_description">video(s) from your studio.</string>
     <string name="close">Close</string>
+    <string name="time">01:09</string>
     <string name="save_to_library">Save to Library</string>
+    <string name="save">Save</string>
     <string name="share">Share</string>
     <string name="loading">Loading</string>
     <string name="stop">stop</string>
