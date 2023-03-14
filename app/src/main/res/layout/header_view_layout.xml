@@ -10,6 +10,9 @@
         android:layout_width="@dimen/dimen_48"
         android:layout_height="match_parent"
         android:padding="@dimen/dimen_12"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:focusable="true"
+        android:clickable="true"
         android:src="@drawable/ic_black_back"
         app:layout_constraintStart_toStartOf="parent" />
 

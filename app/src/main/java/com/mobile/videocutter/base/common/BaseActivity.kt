@@ -61,6 +61,11 @@ abstract class BaseActivity(@LayoutRes protected val layoutId: Int) : AppCompatA
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        onCleaned()
+    }
+
     override fun onInitView() {}
 
     open fun attachView() {

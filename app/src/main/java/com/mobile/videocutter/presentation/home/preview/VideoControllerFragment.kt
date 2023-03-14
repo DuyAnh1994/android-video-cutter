@@ -13,7 +13,7 @@ import com.mobile.videocutter.presentation.home.mystudio.ShareFragment
 import getFormattedTime
 
 
-class VideoControllerFragment: BaseBindingFragment<VideoControllerFragmentBinding>(R.layout.video_controller_fragment) {
+class VideoControllerFragment : BaseBindingFragment<VideoControllerFragmentBinding>(R.layout.video_controller_fragment) {
     companion object {
         const val VIDEO_DURATION = "VIDEO_DURATION"
     }
@@ -64,7 +64,7 @@ class VideoControllerFragment: BaseBindingFragment<VideoControllerFragmentBindin
                 if (player != null) {
                     binding.sbVideoController.progress = player!!.currentPosition.toInt()
                     binding.tvVideoControllerCurrentTime.text = getFormattedTime(player!!.currentPosition)
-                    binding.tvVideoControllerRemainTime.text = "-"+ getFormattedTime(player!!.duration - player!!.currentPosition)
+                    binding.tvVideoControllerRemainTime.text = "-" + getFormattedTime(player!!.duration - player!!.currentPosition)
                 }
                 mHandler.postDelayed(this, 10)
             }
